@@ -18,6 +18,9 @@
   --studio-word-color: #000000;
   --button-active: #188ce8;
   --footer-text-color: rgba(255, 255, 255, 0.6);
+  --gradient: rgba(47, 48, 58, 0.4);
+  --main-txt-cl: #303030;
+  --social-icon: #AFB1B8;
 }
 
 body {
@@ -123,10 +126,30 @@ section {
 }
 
 /* Site-info */
+.svg-logo {
+  display: flex;
+  align-items: center;
+}
 
+.svg-header {
+  margin-right: 10px;
+  fill: currentColor;
+}
+
+.svg-logo:hover,
+.svg-logo:focus {
+  fill: var(--button-active); 
+ 
+}
+
+.item-svg {
+  fill: currentColor;
+}
 .site-info .link {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
   color: var(--primary-text-color);
-
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -152,7 +175,15 @@ section {
 /* Hero  */
 
 .hero {
+  max-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
   background-color: var(--background-titles-color);
+  background-image: url(../img/hero/hero.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   text-align: center;
   padding: 200px 0;
 }
@@ -180,6 +211,16 @@ section {
   background-color: var(--button-active);
 }
 /* Feature-list */
+.fuature {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 270px;
+  height: 120px;
+  border-radius: 4px;
+  margin-bottom: 30px;
+  background-color: var(--background-secondary-color);
+}
 
 .fuature-list {
   display: flex;
@@ -228,6 +269,25 @@ section {
 }
 
 /* Team */
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.socials-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  color: #AFB1B8;
+  background-color:var(--background-main-color);
+  border-radius: 50%;
+ 
+}
+
+
 .section-2 {
   background-color: var(--background-secondary-color);
   padding: 94px 0;
@@ -237,6 +297,7 @@ section {
 }
 .team {
   display: flex;
+  gap: 30px;
 }
 .list-team {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -245,9 +306,7 @@ section {
   width: 270px;
   background-color: var(--background-main-color);
 }
-.team li {
-  margin-right: 30px;
-}
+
 .team li:last-child {
   margin-right: 0;
 }
@@ -277,11 +336,44 @@ section {
   line-height: 1.18;
   text-align: center;
   letter-spacing: 0.03em;
+  margin-bottom: 16px;
 }
 
 .title-text {
   padding-top: 30px;
   padding-bottom: 30px;
+}
+/* regular customers*/
+.list-customers {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.item-customers {
+  display: flex;
+  justify-content: center;
+
+  width: 170px;
+  height: 92px;
+}
+
+.customers-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--social-icon);
+  width: 100%;
+  height: 100%;
+
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+}
+
+.customers-link:hover,
+.customers-link:focus {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
 }
 /* Footer */
 
@@ -338,7 +430,50 @@ section {
 
 .page-studio-white {
   color: var(--background-main-color);
+
 }
+.footer-list {
+  display: flex;
+  align-items: baseline;
+}
+
+.social-list{
+  display: flex;
+  gap: 10px;
+}
+.item-social-footer {
+
+  margin-bottom: 20px;
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+
+  color:var(--background-main-color);
+}
+.footer-list {
+  display: flex;
+  align-items: baseline;
+}
+
+.item-footer {
+  margin-right: 70px;
+}
+
+.item-footer:last-child {
+  margin-right: 0;
+}
+footer .social-link {
+  display: block;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  fill: var(--background-main-color);
+}
+
 /* Button */
 .button {
   padding: 10px 32px;
@@ -391,9 +526,9 @@ section {
   width: 370px;
   border-color: var(--background-main-color);
 }
-.table-list{
+.table-list {
   padding: 20px 24px;
-  border: 1px solid #EEEEEE;
+  border: 1px solid #eeeeee;
 }
 .title-g {
   color: var(--title-text-color);
